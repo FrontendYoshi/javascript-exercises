@@ -6,12 +6,23 @@ import { isEven, isOdd } from './basics.mjs'
  * 
  * Optional: Verwende deine Funktion isOdd aus den basics
  * 
- * @param {[int]} numbers
- * @returns {[int]}
+ * @param {[int]} numbers //Aray von Zahlen
+ * @returns {[int]} 
  */
-export function filterOdd (numbers) {
-
-    // ...
+export function filterOdd(numbers)//(numbers) sind meine Argumente, da können mehrere durch KOmmata getrennte Argumente drin stehen
+ {
+    return numbers,filter((numbers)=> numbers%2 !==0);
+    //Alternative, wenn die isOdd Funktion bereits erstellt wurde
+    return.numbers.filter(isOdd);
+    //Alternative:
+    let result = [];
+    for (number of numbers) {
+        if (number % 2 !== 0) // ! ist ein Nicht-Operator also das ist nicht gleich/ungleich das
+        {
+            result.push(numb)
+        }
+    }
+    return result
 }
 
 /**
@@ -21,11 +32,10 @@ export function filterOdd (numbers) {
  * Optional: Verwende deine Funktion isEven aus den basics
  * 
  * @param {[int]} numbers 
- * @returns {[int]}
+ * @returns {[int]} 
  */
-export function filterEven (numbers) {
+export function filterEven(numbers) {
 
-    // ...
 }
 
 /**
@@ -36,7 +46,21 @@ export function filterEven (numbers) {
  * @param {number|[number]} numbers 
  * @returns {number|[number]}
  */
-export function square (numbers) {
+export function square(numbers) {
 
     // ...
+    Array.isArray(numbers)//true/false
+
+    //Wenn numbers ein Array ist:
+    //Quadriere jedes Element und sammel sie in einem neuen Array
+    //Gib das neue Array als Ergebnis zurück
+
+    //sonst:
+    //Quadriere numbers und gib das Ergebnis zurück
+    if (Array.isArray(numbers)) {
+        return numbers.map(number => number * number);//map um jedes Element zu durchlaufen
+    }
+    else {
+        return numbers * numbers
+    }
 }
